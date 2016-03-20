@@ -4,7 +4,6 @@
   "description": "A tiny interface for finding a facebook account and page from picture url",
   "dependencies": {
     "babel-preset-react": "^6.5.0",
-    "del": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",
     "gulp-uglify": "^1.5.3",
