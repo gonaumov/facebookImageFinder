@@ -1,20 +1,18 @@
-var gulp = require("gulp");
-var babel = require("gulp-babel");
-var gutil = require('gulp-util');
-var uglify = require('gulp-uglify');
-var concat = require('gulp-concat');
+const gulp = require("gulp"),
+      babel = require("gulp-babel"),
+      uglify = require('gulp-uglify'),
+      useref = require('gulp-useref'),
+      gulpif = require('gulp-if');
 
-gulp.task("default", function () {
+gulp.task("build-babel", function () {
     return gulp.src("src/app.js")
         .pipe(babel())
-        .pipe(gulp.dest("dist"));
-});
-
-gulp.task('js', function () {
-    gulp.src('src/*.js')
         .pipe(uglify())
-        .pipe(concat('all.js'))
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest("babelBuild"));
 });
 
-
+gulp.task("default", ["build-babel"], function() {
+	return gulp.src('index.html')
+	     .pipe(useref())
+	     .pipe(gulp.dest('dist'))
+});

@@ -1,0 +1,26 @@
+{
+  "name": "facebookImageFinder",
+  "description": "A tiny interface for finding a facebook account and page from picture url",
+  "main": "",
+  "authors": [
+    "Georgi Naumov <gonaumov@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "images"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.6",
+    "react": "~0.14.7"
+  }
+}
